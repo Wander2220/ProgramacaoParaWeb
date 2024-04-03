@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Tarefas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Tarefas</h1>
+        <div class="formulario">
+            <input type="text" id="tituloInput" placeholder="Título da Tarefa">
+            <textarea id="descricaoInput" placeholder="Descrição da Tarefa"></textarea>
+            <select id="categoriaInput">
+                <option value="trabalho">Trabalho</option>
+                <option value="pessoal">Pessoal</option>
+                <option value="estudo">Estudo</option>
+                <option value="outro">Outro</option>
+            </select>
+            <select id="prioridadeInput">
+                <option value="baixa">Baixa Prioridade</option>
+                <option value="media">Média Prioridade</option>
+                <option value="alta">Alta Prioridade</option>
+            </select>
+            <input type="date" id="dataInput">
+            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+        </div>
+        <div class="categorias">
+            <button onclick="filtrarTarefas('todos')">Todos</button>
+            <button onclick="filtrarTarefas('trabalho')">Trabalho</button>
+            <button onclick="filtrarTarefas('pessoal')">Pessoal</button>
+            <button onclick="filtrarTarefas('estudo')">Estudo</button>
+            <button onclick="filtrarTarefas('outro')">Outro</button>
+        </div>
+        <div class="tarefas" id="tarefas"></div>
+    </div>
+    <script src="lib.js"></script>
+</body>
+</html>
